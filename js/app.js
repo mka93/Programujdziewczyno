@@ -59,12 +59,54 @@ document.addEventListener('DOMContentLoaded', function () {
         //console.log('działa przy scrollu');
         edge.style.borderBottom = "3px solid #7f7f7f";
     });
-    
-    
+
+
     var back = document.querySelector(".back-button");
-    back.addEventListener("click", function(){
-        window.scroll(0,0);
+    back.addEventListener("click", function () {
+        window.scroll(0, 0);
     })
+
+    var items = document.querySelectorAll(".org");
+    var dots = document.querySelectorAll(".dot");
+
+    dots[0].addEventListener('click', function () {
+        for (var l = 0; l < 3; l++) {
+            dots[l].classList.remove('active');
+            items[l].classList.remove('visible');
+        }
+        
+        this.classList.add('active');
+        items[0].classList.add('visible');
+    })
+    
+    dots[1].addEventListener('click', function () {
+        for (var l = 0; l < 3; l++) {
+            dots[l].classList.remove('active');
+            items[l].classList.remove('visible');
+        }
+        
+        this.classList.add('active');
+        items[1].classList.add('visible');
+    })
+    
+    dots[2].addEventListener('click', function () {
+        for (var l = 0; l < 3; l++) {
+            dots[l].classList.remove('active');
+            items[l].classList.remove('visible');
+        }
+        
+        this.classList.add('active');
+        items[2].classList.add('visible');
+    })
+
+
+
+    /*
+    dots[1].addEventListener('click', function(){
+        this.classList.add('active');
+        items[1].classList.add('visible');
+    })*/
+
 
 
 
