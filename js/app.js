@@ -59,7 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
         //console.log('działa przy scrollu');
         edge.style.borderBottom = "3px solid #7f7f7f";
     });
-
+    
+    
+    var back = document.querySelector(".back-button");
+    back.addEventListener("click", function(){
+        window.scroll(0,0);
+    })
 
 
 
